@@ -1,7 +1,6 @@
 # group1-project
-The other repo was not working
-Instructions for Affirmation File
-  1. Download the file "Affirmation File".
+Instructions for AffirmationFile
+  1. Download the file "AffirmationFile".
   
   2. Download all of the affirmation text for the files. (annoyed.txt, happy.txt, anxious.txt, sad.txt.rtf and upset.txt)
   #your program will not run properly unless you download all 5 files.
