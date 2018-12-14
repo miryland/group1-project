@@ -16,7 +16,7 @@ Instructions for Affirmation File
   
   7. It will then ask you if you would like to add a new affirmation to the file.
   
-  8. If you select no then the program will say 'bye' and it will break.
+  8. If you select no then the program will say 'bye' and the system will exit.
   
   9.  If you choose yes then the affirmation that you type in will be displayed in the file that corresponds with the emotion you chose earlier in the program
   
