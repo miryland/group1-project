@@ -3,7 +3,7 @@ The other repo was not working
 Instructions for Affirmation File
   1. Download the file "Affirmation File".
   
-  2. Download all of the affirmation text for the files. (annoyed.txt, happy.txt, anxious.txt, sad.txt and upset.txt)
+  2. Download all of the affirmation text for the files. (annoyed.txt, happy.txt, anxious.txt, sad.txt.rtf and upset.txt)
   #your program will not run properly unless you download all 5 files.
   
   3. If you are using sublime please make sure you run everything in your terminal. Also please make sure all of your files are in the same directory.
