@@ -1,0 +1,134 @@
+import time
+import random
+import smtplib
+from string import Template
+import sys
+import pytest
+
+
+class Moods():
+'''this is the class'''
+	def happy(self):
+		lines = open("/Users/maimounacamara/Downloads/happy.txt").read().splitlines()
+		line = random.choice(lines)
+		return line
+	def sad(self):
+		lines = open("/Users/maimounacamara/Downloads/sad.txt.rtf").read().splitlines()
+		line = random.choice(lines)
+		return line
+	def anxious(self):
+		lines = open("/Users/maimounacamara/Downloads/anxious.txt").read().splitlines()
+		line = random.choice(lines)
+		return line
+	def upset(self):
+		lines = open("/Users/maimounacamara/Downloads/upset.txt").read().splitlines()
+		line = random.choice(lines)
+		return line
+	def annoyed(self):
+		lines = open("/Users/maimounacamara/Downloads/annoyed.txt").read().splitlines()
+		line = random.choice(lines)
+		return line
+
+'''here the class file hold all the functions that will open up the different affirmation 
+files, read it and read each line. the user should be aware that there are only a cetain number
+of affirmations located in the file'''
+
+def main():
+	print("*************************************************")
+	print("Welcome to Affirm Now")
+	print(time.strftime("The Current Time is: %H:%M:%S"))  #the current time with be in a 24 hour format 
+	print("How are you feeling?")
+	print('''Please enter an emotion based on how you are feeling,1 = happy, 2 = sad, 3 = anxious, 4 = upset, 5 = annoyed''')
+	global mood
+#the main function will tell the user the current time and promt the user to enter a number based on thier emotion 
+
+
+	while True:
+		try:
+			mood = float(input("Please enter your mood:"))
+			if mood == 1 or mood == 2 or mood == 3 or mood == 4 or mood == 5:
+				break
+		except:
+			print("Please enter one of the numbers")
+			continue
+	moodsInst = Moods()
+	'''if the user does not enter the appropriate mood number requested than it will 
+	repeatdly prompt the user to enter a number that corresponds with the emotions. this is also a test'''
+
+	if mood == 1:
+		print(moodsInst.happy())
+		affirm = int(input("Do you want to add new one? Enter 1 for 'Yes', Enter 2 for 'No: "))
+		if affirm==1:
+			message = input("Enter your affirmation: ")
+			filename = "/Users/maimounacamara/Downloads/happy.txt"
+			file = open(filename, 'a')
+			file.write(message + '\n')
+			file.close()
+			#user will be able to input thier own affirmation which will be placed in the affirmation file that was inputed in the earlier prompt 
+		else:
+			print("Bye!")
+			sys.exit()
+
+
+	elif mood == 2:
+		print(moodsInst.sad())
+		affirm = int(input("Do you want to add new: Enter 1 for 'Yes', Enter 2 for 'No: "))
+		if affirm == 1:
+			message = input("Enter your affirmation: ")
+			filename = "/Users/maimounacamara/Downloads/sad.txt.rtf"
+			file = open(filename, 'a')
+			file.write(message + '\n')
+			file.close()
+			#user will be able to input thier own affirmation which will be placed in the affirmation file that was inputed in the earlier prompt
+		else:
+			print("Bye!")
+			sys.exit()
+
+	elif mood == 3:
+		print(moodsInst.anxious())
+		affirm = int(input("Do you want to add new: Enter 1 for 'Yes', Enter 2 for 'No: "))
+		if affirm == 1:
+			message = input("Enter your affirmation: ")                
+			filename = "/Users/maimounacamara/Downloads/anxious.txt"
+			file = open(filename, 'a')
+			file.write(message + '\n')
+			file.close()
+			#user will be able to input thier own affirmation which will be placed in the affirmation file that was inputed in the earlier prompt
+		else:
+			print("Bye!")
+			sys.exit()
+
+	elif mood == 4:
+		print(moodsInst.upset())
+		affirm = int(input("Do you want to add new: Enter 1 for 'Yes', Enter 2 for 'No': "))
+		if affirm == 1:
+			message = input("Enter your affirmation: ")
+			filename = "/Users/maimounacamara/Downloads/upset.txt"
+			file = open(filename, 'a')
+			file.write(message + '\n')
+			file.close()
+			#user will be able to input thier own affirmation which will be placed in the affirmation file that was inputed in the earlier prompt
+		else:
+			print("Bye!")
+			sys.exit()
+
+	elif mood == 5:
+		print(moodsInst.annoyed())
+		affirm = int(input("Do you want to add new: Enter 1 for 'Yes', Enter 2 for 'No: "))
+		if affirm == 1:
+			message = input("Enter your affirmation: ")
+			filename = "/Users/maimounacamara/Downloads/annoyed.txt"
+			file = open(filename, 'a')
+			file.write(message+ '\n')
+			file.close()
+			#user will be able to input thier own affirmation which will be placed in the affirmation file that was inputed in the earlier prompt
+		else:
+			print("Bye!")
+			sys.exit()
+			#program exits if user enters 2 for no
+
+def test():
+
+
+if __name__ == '__main__':
+	main()
